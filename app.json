@@ -4,15 +4,16 @@
     "pages/img/img",
     "pages/mine/mine",
     "pages/search/search",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/searchInput/searchInput"
   ],
   "window":{
     "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#0094ff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#DF0708",
+    "navigationBarTitleText": "网易云",
     "navigationBarTextStyle":"white",
     "enablePullDownRefresh":true,
-    "backgroundColor": "#000000"
+    "backgroundColor": "#1296DB"
   },
   "tabBar": {
     "list": [{

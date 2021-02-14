@@ -1,21 +1,44 @@
-/**index.wxss**/
-.userinfo {
+.swiper swiper {
+  width: 750rpx;
+  height: 277rpx;
+}
+.swiper swiper image {
+  width: 100%;
+}
+.cate {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  background-color: #DF0708;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.cate navigator {
+  flex: 1;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.cate navigator image {
+  width: 100%;
 }
-
-.usermotto {
-  margin-top: 200px;
+.recommendList {
+  padding-left: 20rpx;
+  background-color: #DF0708;
+  color: #fff;
+  border-top: #FFFFFF 5px solid;
+}
+.recommend {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #DF0708;
+  margin: 10rpx  0rpx;
+}
+.recommend .title {
+  flex: 1;
+  align-self: center;
+  color: #FFFFFF;
+  padding: 15rpx;
+}
+.recommend .content {
+  flex: 1;
+  margin-bottom: -10rpx;
+}
+.recommend .content image {
+  width: 100%;
+  padding-bottom: -12rpx;
 }
