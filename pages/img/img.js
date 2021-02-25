@@ -1,20 +1,28 @@
-// pages/img/img.js
+import {request} from "../../request/request"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getImgList();
   },
-
+   getImgList(){
+    let index = 0
+     request({url:"http://localhost:3000/top/list",idx:1})
+    .then(result=>{
+      this.setData({
+        imgList:result.data.banners
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,1 +1,7 @@
-/* pages/img/img.wxss */
+.topList{
+  padding: 20rpx;
+}
+.swiperItem .title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}

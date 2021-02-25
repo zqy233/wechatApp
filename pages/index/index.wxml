@@ -13,7 +13,7 @@
   </view>
   <!-- 导航模块 -->
   <view class="cate">
-    <navigator wx:for="{{cateList}}" wx:key="id">
+    <navigator wx:for="{{cateList}}" wx:key="id" url="../index/index">
       <image mode="widthFix" src="{{item.iconUrl}}"></image>
     </navigator>
   </view>
@@ -29,7 +29,6 @@
       <view class="title">
         <text>{{item.name}}</text>
       </view>
-      
     </view>
   </view>
 </view>

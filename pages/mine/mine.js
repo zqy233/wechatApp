@@ -1,66 +1,79 @@
-// pages/mine/mine.js
+import request from "../../request/request";
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    phone: '',
+    password: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  //options(Object)
   onLoad: function (options) {
 
   },
+  // 获取输入框输入值
+  handleInput(event) {
+    // let id = event.currentTarget.id;
+    let id = event.currentTarget.dataset.type;
+    let value = event.detail.value;
+    console.log(event);
+    console.log(id, value);
+    this.setData({
+      [id]: value
+    })
+  },
+  login() {
+    let {phone,password} = this.data;
+    if (!phone) {
+      wx.showToast({
+        title: '手机号不能为空',
+        icon: 'none'
+      })
+    } else if (!password) {
+      wx.showToast({
+        title: '密码不能为空',
+        icon: 'none'
+      })
+    } else {
+      wx.switchTab({
+        url: '../index/index',
+        success: () => {
+          wx.showToast({
+            content: '成功',
+            type: 'success',
+            duration: 4000
+          });
+        }
+      })
+    }
+    // let phoneReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+    // if(){
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+    // }
+  },
   onReady: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
+  },
+  onPageScroll: function () {
+
+  },
+  //item(index,pagePath,text)
+  onTabItemTap: function (item) {
+
   }
-})
+});

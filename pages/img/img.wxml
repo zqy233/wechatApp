@@ -1,2 +1,13 @@
-<!--pages/img/img.wxml-->
-<text>pages/img/img.wxml</text>
+<view class="topList">
+  <navigator title="排行榜" nav="热歌风向标"></navigator>
+  <swiper class="topListSwiper">
+    <swiper-item>
+      <view class="title">云音乐</view>
+      <view class="musicItem">
+        <image src=""></image>
+        <text class="count">3</text>
+        <text class="musicName">爱</text>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
